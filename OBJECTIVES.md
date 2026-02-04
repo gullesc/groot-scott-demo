@@ -14,22 +14,22 @@ Track your progress through this phase.
 
 ### Document Ingestion Pipeline
 
-- [ ] Started
-- [ ] Successfully processes PDFs, text files, and markdown documents
-- [ ] Implements intelligent chunking with overlap handling
-- [ ] Includes error handling for corrupted or unsupported files
-- [ ] Outputs structured chunks with metadata (source, page number, etc.)
-- [ ] Completed
+- [x] Started
+- [x] Successfully processes PDFs, text files, and markdown documents
+- [x] Implements intelligent chunking with overlap handling
+- [x] Includes error handling for corrupted or unsupported files
+- [x] Outputs structured chunks with metadata (source, page number, etc.)
+- [x] Completed
 
 
 ### Basic RAG Question-Answering System
 
-- [ ] Started
-- [ ] Accepts user questions and searches through document chunks
-- [ ] Uses basic text similarity for retrieval (TF-IDF or keyword matching)
-- [ ] Formats retrieved context for Claude API calls
-- [ ] Returns answers with source citations
-- [ ] Completed
+- [x] Started
+- [x] Accepts user questions and searches through document chunks
+- [x] Uses basic text similarity for retrieval (TF-IDF or keyword matching)
+- [x] Formats retrieved context for Claude API calls
+- [x] Returns answers with source citations
+- [x] Completed
 
 
 ## Notes

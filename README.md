@@ -8,34 +8,34 @@ Estimated time: 8 hours
 
 ## Learning Objectives
 
-1. Understand the core principles of RAG and why it solves LLM limitations
-2. Set up development environment with Anthropic API and essential libraries
-3. Build a basic document ingestion and chunking pipeline
-4. Create your first RAG query using simple text matching
+1. [ ] Understand the core principles of RAG and why it solves LLM limitations
+2. [ ] Set up development environment with Anthropic API and essential libraries
+3. [ ] Build a basic document ingestion and chunking pipeline
+4. [ ] Create your first RAG query using simple text matching
 
 ## Deliverables
 
 
-### Document Ingestion Pipeline
+### Document Ingestion Pipeline (Completed)
 
 Build a Python script that can load, clean, and chunk various document formats (PDF, TXT, MD)
 
 **Acceptance Criteria:**
-- [ ] Successfully processes PDFs, text files, and markdown documents
-- [ ] Implements intelligent chunking with overlap handling
-- [ ] Includes error handling for corrupted or unsupported files
-- [ ] Outputs structured chunks with metadata (source, page number, etc.)
+- [x] Successfully processes PDFs, text files, and markdown documents
+- [x] Implements intelligent chunking with overlap handling
+- [x] Includes error handling for corrupted or unsupported files
+- [x] Outputs structured chunks with metadata (source, page number, etc.)
 
 
-### Basic RAG Question-Answering System
+### Basic RAG Question-Answering System (Completed)
 
 Create a simple RAG system that can answer questions about your processed documents using Claude
 
 **Acceptance Criteria:**
-- [ ] Accepts user questions and searches through document chunks
-- [ ] Uses basic text similarity for retrieval (TF-IDF or keyword matching)
-- [ ] Formats retrieved context for Claude API calls
-- [ ] Returns answers with source citations
+- [x] Accepts user questions and searches through document chunks
+- [x] Uses basic text similarity for retrieval (TF-IDF or keyword matching)
+- [x] Formats retrieved context for Claude API calls
+- [x] Returns answers with source citations
 
 
 ## Key Concepts
