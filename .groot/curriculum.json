@@ -1,0 +1,448 @@
+{
+  "id": "4dce9393-8e6c-4f4a-b533-8dec52ab0280",
+  "title": "Master RAG Implementation with Anthropic Claude",
+  "description": "Learn to build powerful Retrieval-Augmented Generation (RAG) systems using Anthropic's Claude models. This hands-on curriculum takes you from basic document processing to production-ready RAG pipelines that can handle complex queries, multiple data sources, and advanced retrieval strategies. You'll gain practical experience with embedding models, vector databases, prompt engineering for RAG, and system optimization - all while building a portfolio of working RAG applications.",
+  "topic": "RAG (Retrieval-Augmented Generation) with Anthropic Claude",
+  "createdAt": "2026-02-04T23:27:57.899Z",
+  "updatedAt": "2026-02-04T23:27:57.899Z",
+  "currentPhaseIndex": 0,
+  "growthStage": "seed",
+  "metadata": {
+    "estimatedHours": 45,
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "Python programming (intermediate level)",
+      "Basic understanding of APIs and JSON",
+      "Familiarity with machine learning concepts",
+      "Experience with Python libraries (pandas, requests)",
+      "Basic command line usage"
+    ],
+    "tags": [],
+    "targetAudience": "Python developers with basic ML/AI knowledge who want to build intelligent document processing and question-answering systems"
+  },
+  "phases": [
+    {
+      "id": "47bb947a-4dd3-4fcd-9eda-95e37fa834ee",
+      "number": 1,
+      "title": "RAG Foundations & Document Processing",
+      "description": "Plant the seeds of RAG understanding by building your first document processing pipeline and learning how retrieval augments generation",
+      "growthStage": "seed",
+      "estimatedHours": 8,
+      "status": "completed",
+      "objectives": [
+        {
+          "id": "4b89b8f5-40b9-4512-83ea-aa1e7d1a72c2",
+          "description": "Understand the core principles of RAG and why it solves LLM limitations",
+          "completed": false
+        },
+        {
+          "id": "4fe2c575-7ba6-4d3e-8954-cc46dad32d48",
+          "description": "Set up development environment with Anthropic API and essential libraries",
+          "completed": false
+        },
+        {
+          "id": "a8206e2e-6c0a-4cbd-b323-f34d1b290f3f",
+          "description": "Build a basic document ingestion and chunking pipeline",
+          "completed": false
+        },
+        {
+          "id": "e0fae003-173c-4dab-a20c-b149d9cb774f",
+          "description": "Create your first RAG query using simple text matching",
+          "completed": false
+        }
+      ],
+      "deliverables": [
+        {
+          "id": "89481e9f-a179-4829-8b68-4c1c3c99960d",
+          "title": "Document Ingestion Pipeline",
+          "description": "Build a Python script that can load, clean, and chunk various document formats (PDF, TXT, MD)",
+          "acceptanceCriteria": [
+            "Successfully processes PDFs, text files, and markdown documents",
+            "Implements intelligent chunking with overlap handling",
+            "Includes error handling for corrupted or unsupported files",
+            "Outputs structured chunks with metadata (source, page number, etc.)"
+          ],
+          "completed": true
+        },
+        {
+          "id": "68f3de7e-14f5-4cf1-a7f6-3da704ad7479",
+          "title": "Basic RAG Question-Answering System",
+          "description": "Create a simple RAG system that can answer questions about your processed documents using Claude",
+          "acceptanceCriteria": [
+            "Accepts user questions and searches through document chunks",
+            "Uses basic text similarity for retrieval (TF-IDF or keyword matching)",
+            "Formats retrieved context for Claude API calls",
+            "Returns answers with source citations"
+          ],
+          "completed": true
+        }
+      ],
+      "keyConcepts": [
+        {
+          "term": "Retrieval-Augmented Generation (RAG)",
+          "definition": "A framework that combines information retrieval with language generation, allowing LLMs to access external knowledge during response generation"
+        },
+        {
+          "term": "Document Chunking",
+          "definition": "The process of breaking large documents into smaller, manageable pieces that can be effectively processed and retrieved"
+        },
+        {
+          "term": "Context Window",
+          "definition": "The maximum amount of text (measured in tokens) that a language model can process in a single request"
+        },
+        {
+          "term": "Hallucination",
+          "definition": "When an LLM generates information that sounds plausible but is factually incorrect or not supported by the provided context"
+        }
+      ]
+    },
+    {
+      "id": "f85cd701-6e88-40ae-b123-6c8668a2f37f",
+      "number": 2,
+      "title": "Semantic Search with Embeddings",
+      "description": "Watch your RAG system sprout semantic understanding by implementing embedding-based retrieval for more intelligent document search",
+      "growthStage": "sprout",
+      "estimatedHours": 10,
+      "status": "available",
+      "objectives": [
+        {
+          "id": "8c477d0d-f2c1-41c0-bf01-50d44f2c4617",
+          "description": "Implement embedding-based semantic search to replace keyword matching",
+          "completed": false
+        },
+        {
+          "id": "3f471128-7631-4597-a9d6-1fa42cd50975",
+          "description": "Set up and configure a vector database for efficient similarity search",
+          "completed": false
+        },
+        {
+          "id": "e19349c8-fbdd-489e-b6a1-76d122cfdefb",
+          "description": "Optimize retrieval quality through embedding model selection and chunking strategies",
+          "completed": false
+        },
+        {
+          "id": "04557714-6ed6-4568-b4f8-95e1977c978b",
+          "description": "Build evaluation metrics to measure retrieval performance",
+          "completed": false
+        }
+      ],
+      "deliverables": [
+        {
+          "id": "8b441844-b728-47c5-b4f7-41525b2434a6",
+          "title": "Vector Database Implementation",
+          "description": "Set up a vector database (Chroma or Pinecone) and implement document embedding storage and retrieval",
+          "acceptanceCriteria": [
+            "Successfully stores document chunks as embeddings in vector database",
+            "Implements efficient similarity search with configurable top-k results",
+            "Includes metadata filtering capabilities",
+            "Provides performance benchmarks for query response times"
+          ],
+          "completed": false
+        },
+        {
+          "id": "3e2831c6-5ccb-4d11-9c49-ac7e181008f4",
+          "title": "Semantic RAG System",
+          "description": "Upgrade your RAG system to use semantic search instead of keyword matching",
+          "acceptanceCriteria": [
+            "Replaces text-based search with embedding-based similarity search",
+            "Handles query embedding generation and similarity scoring",
+            "Implements retrieval result ranking and filtering",
+            "Demonstrates improved relevance over keyword-based approach"
+          ],
+          "completed": false
+        },
+        {
+          "id": "f38fb91b-a69f-4ff5-99c8-45a38a880be6",
+          "title": "Retrieval Evaluation Framework",
+          "description": "Build a system to evaluate and optimize retrieval quality using test questions and ground truth",
+          "acceptanceCriteria": [
+            "Creates test dataset with questions and expected relevant chunks",
+            "Implements metrics like precision@k, recall@k, and MRR",
+            "Compares different embedding models and chunking strategies",
+            "Generates evaluation reports with actionable insights"
+          ],
+          "completed": false
+        }
+      ],
+      "keyConcepts": [
+        {
+          "term": "Embeddings",
+          "definition": "Dense vector representations of text that capture semantic meaning, allowing for similarity comparisons between different pieces of text"
+        },
+        {
+          "term": "Vector Database",
+          "definition": "A specialized database designed to store, index, and query high-dimensional vectors efficiently using approximate nearest neighbor search"
+        },
+        {
+          "term": "Semantic Similarity",
+          "definition": "A measure of how closely related two pieces of text are in meaning, regardless of exact word matches"
+        },
+        {
+          "term": "Cosine Similarity",
+          "definition": "A metric used to measure similarity between vectors by calculating the cosine of the angle between them"
+        }
+      ]
+    },
+    {
+      "id": "eb5b0efd-c5ea-496a-86be-ae76fb97f9dc",
+      "number": 3,
+      "title": "Advanced Prompt Engineering for RAG",
+      "description": "Help your RAG sapling grow stronger branches through sophisticated prompt design and context management for Claude",
+      "growthStage": "sapling",
+      "estimatedHours": 8,
+      "status": "locked",
+      "objectives": [
+        {
+          "id": "7d7f5cc5-568f-4e20-b8b5-3997b5d92cbd",
+          "description": "Master prompt engineering techniques specific to RAG applications",
+          "completed": false
+        },
+        {
+          "id": "f8371d11-e1e6-42fb-bbad-8d640188787d",
+          "description": "Implement dynamic context management to handle varying amounts of retrieved information",
+          "completed": false
+        },
+        {
+          "id": "3809448e-6d61-497b-b097-5d05ceaa7b88",
+          "description": "Design prompts that encourage accurate citation and reduce hallucination",
+          "completed": false
+        },
+        {
+          "id": "ce117a86-224a-473d-b4fb-158fdd813761",
+          "description": "Build a prompt template system for different query types and domains",
+          "completed": false
+        }
+      ],
+      "deliverables": [
+        {
+          "id": "7758acdd-4d7f-4d83-bfac-e029cd9af757",
+          "title": "RAG Prompt Template Library",
+          "description": "Create a comprehensive library of prompt templates for different RAG use cases and query types",
+          "acceptanceCriteria": [
+            "Includes templates for factual Q&A, summarization, comparison, and analysis",
+            "Implements dynamic context insertion with proper formatting",
+            "Provides templates for different document types (technical, legal, academic)",
+            "Includes fallback prompts for low-confidence retrievals"
+          ],
+          "completed": false
+        },
+        {
+          "id": "ffa4d376-e71c-464b-938e-f4ab957fa2e2",
+          "title": "Context-Aware RAG System",
+          "description": "Build an intelligent system that adapts prompts based on retrieval quality and query complexity",
+          "acceptanceCriteria": [
+            "Analyzes retrieval confidence scores to adjust prompt strategy",
+            "Handles cases with too much or too little retrieved context",
+            "Implements query classification to select appropriate prompt templates",
+            "Includes confidence indicators in responses"
+          ],
+          "completed": false
+        },
+        {
+          "id": "67ae1269-909e-414f-9558-5d96a7a1c8ed",
+          "title": "Citation and Source Tracking System",
+          "description": "Develop a robust system for tracking and citing sources in generated responses",
+          "acceptanceCriteria": [
+            "Maintains detailed mapping between generated text and source chunks",
+            "Implements multiple citation formats (academic, web, etc.)",
+            "Provides clickable source links in responses",
+            "Validates that citations actually support the generated claims"
+          ],
+          "completed": false
+        }
+      ],
+      "keyConcepts": [
+        {
+          "term": "Few-shot Prompting",
+          "definition": "A technique where examples of desired input-output pairs are included in the prompt to guide the model's behavior"
+        },
+        {
+          "term": "Chain of Thought",
+          "definition": "A prompting technique that encourages the model to break down complex reasoning into step-by-step explanations"
+        },
+        {
+          "term": "Context Management",
+          "definition": "Strategies for organizing and presenting retrieved information to maximize the language model's understanding and response quality"
+        },
+        {
+          "term": "Citation Prompting",
+          "definition": "Techniques for instructing the model to properly reference and quote from the provided source material"
+        }
+      ]
+    },
+    {
+      "id": "758fd3e9-c722-4ce8-9db4-f6a0850f8dda",
+      "number": 4,
+      "title": "Multi-Modal RAG and Advanced Features",
+      "description": "Watch your RAG system grow into a strong tree by adding support for images, tables, and complex document structures",
+      "growthStage": "tree",
+      "estimatedHours": 12,
+      "status": "locked",
+      "objectives": [
+        {
+          "id": "009190a6-5111-4eb3-8221-3aa5a48a5e11",
+          "description": "Extend RAG capabilities to handle images, tables, and structured data",
+          "completed": false
+        },
+        {
+          "id": "a9a30ff0-a4b1-4267-942a-fd140483a810",
+          "description": "Implement advanced retrieval strategies like hybrid search and re-ranking",
+          "completed": false
+        },
+        {
+          "id": "4b3e42c7-37fa-4494-9ada-865ca4e3e259",
+          "description": "Build conversation memory and multi-turn query support",
+          "completed": false
+        },
+        {
+          "id": "f7c23328-2e69-46b4-8bb4-7c1f20c0ed98",
+          "description": "Create domain-specific RAG optimizations for different use cases",
+          "completed": false
+        }
+      ],
+      "deliverables": [
+        {
+          "id": "fd915447-c87e-4efb-9abc-60bbde67c618",
+          "title": "Multi-Modal Document Processor",
+          "description": "Extend your pipeline to extract and process images, tables, and structured content from documents",
+          "acceptanceCriteria": [
+            "Extracts and processes images with OCR and vision models",
+            "Handles table extraction and converts to searchable format",
+            "Processes structured data (JSON, CSV) with proper metadata",
+            "Maintains relationships between different content types"
+          ],
+          "completed": false
+        },
+        {
+          "id": "41f274e1-f790-49e3-b91a-174df10dbfd5",
+          "title": "Hybrid Retrieval System",
+          "description": "Implement a sophisticated retrieval system that combines multiple search strategies",
+          "acceptanceCriteria": [
+            "Combines semantic similarity with keyword matching and metadata filtering",
+            "Implements query expansion and synonym handling",
+            "Includes re-ranking model for result optimization",
+            "Provides explainable retrieval scores and reasoning"
+          ],
+          "completed": false
+        },
+        {
+          "id": "a93a34e9-7e83-4519-949f-acce9ecf1d10",
+          "title": "Conversational RAG Interface",
+          "description": "Build a chat-like interface that maintains conversation context and handles follow-up questions",
+          "acceptanceCriteria": [
+            "Maintains conversation history and context across multiple turns",
+            "Handles follow-up questions and clarifications intelligently",
+            "Implements conversation memory with relevant context retrieval",
+            "Provides conversation summarization and key points extraction"
+          ],
+          "completed": false
+        }
+      ],
+      "keyConcepts": [
+        {
+          "term": "Multi-modal RAG",
+          "definition": "RAG systems that can process and retrieve from multiple types of content including text, images, tables, and structured data"
+        },
+        {
+          "term": "Hybrid Search",
+          "definition": "A retrieval approach that combines multiple search methods (semantic, keyword, metadata) for improved accuracy"
+        },
+        {
+          "term": "Re-ranking",
+          "definition": "A post-retrieval process that reorders search results using additional models or criteria to improve relevance"
+        },
+        {
+          "term": "Conversation Memory",
+          "definition": "The ability to maintain context across multiple interactions in a conversational RAG system"
+        }
+      ]
+    },
+    {
+      "id": "980ce458-9b25-4118-b957-2623f61e5e21",
+      "number": 5,
+      "title": "Production RAG Deployment",
+      "description": "Let your RAG system flower into a production-ready application with monitoring, optimization, and scalability features",
+      "growthStage": "flowering",
+      "estimatedHours": 7,
+      "status": "locked",
+      "objectives": [
+        {
+          "id": "2d2daeda-04c7-4d06-8e68-8e76b572ef64",
+          "description": "Deploy RAG system with proper API design and authentication",
+          "completed": false
+        },
+        {
+          "id": "e6610410-38ab-411b-b709-4177d3114fc5",
+          "description": "Implement comprehensive monitoring and logging for production usage",
+          "completed": false
+        },
+        {
+          "id": "8d3c654e-169d-43ba-ade8-dcbb5b7981b6",
+          "description": "Optimize system performance for speed and cost efficiency",
+          "completed": false
+        },
+        {
+          "id": "ec11495b-9d61-4e11-aa2f-9160242de069",
+          "description": "Build user feedback collection and continuous improvement mechanisms",
+          "completed": false
+        }
+      ],
+      "deliverables": [
+        {
+          "id": "9258d76b-6688-46c3-b357-592b607591a1",
+          "title": "Production RAG API",
+          "description": "Deploy your RAG system as a scalable REST API with proper authentication and documentation",
+          "acceptanceCriteria": [
+            "Implements REST API with FastAPI or Flask with comprehensive endpoints",
+            "Includes authentication, rate limiting, and input validation",
+            "Provides OpenAPI documentation and example usage",
+            "Handles concurrent requests efficiently with proper error handling"
+          ],
+          "completed": false
+        },
+        {
+          "id": "063ca67c-5029-415d-b5c4-696a4e71896f",
+          "title": "Monitoring and Analytics Dashboard",
+          "description": "Build a comprehensive monitoring system to track usage, performance, and quality metrics",
+          "acceptanceCriteria": [
+            "Tracks key metrics: response time, accuracy, user satisfaction, cost per query",
+            "Implements alerting for system failures and performance degradation",
+            "Provides user analytics and usage patterns visualization",
+            "Includes A/B testing framework for system improvements"
+          ],
+          "completed": false
+        },
+        {
+          "id": "d28c023b-a4e4-4858-abb6-0c5173997121",
+          "title": "Performance Optimization Suite",
+          "description": "Implement caching, query optimization, and cost reduction strategies for production scale",
+          "acceptanceCriteria": [
+            "Implements intelligent caching for repeated queries and embeddings",
+            "Optimizes vector database queries and indexing strategies",
+            "Includes cost monitoring and budget alerts for API usage",
+            "Provides performance profiling and bottleneck identification"
+          ],
+          "completed": false
+        }
+      ],
+      "keyConcepts": [
+        {
+          "term": "API Rate Limiting",
+          "definition": "Controlling the number of requests a user can make to prevent abuse and ensure fair usage"
+        },
+        {
+          "term": "Caching Strategy",
+          "definition": "Storing frequently accessed data or computed results to reduce latency and API costs"
+        },
+        {
+          "term": "Observability",
+          "definition": "The ability to understand system behavior through logs, metrics, and traces"
+        },
+        {
+          "term": "A/B Testing",
+          "definition": "Comparing different versions of system components to measure performance improvements"
+        }
+      ]
+    }
+  ]
+}
