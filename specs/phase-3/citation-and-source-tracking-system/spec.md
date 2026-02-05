@@ -46,16 +46,16 @@ The system produces:
 - Formatted reference lists for academic-style outputs
 
 ## Acceptance Criteria
-- [ ] Maintains detailed mapping between generated text and source chunks
-- [ ] Implements multiple citation formats (academic, web, etc.)
-- [ ] Provides clickable source links in responses
-- [ ] Validates that citations actually support the generated claims
+- [x] Maintains detailed mapping between generated text and source chunks
+- [x] Implements multiple citation formats (academic, web, etc.)
+- [x] Provides clickable source links in responses
+- [x] Validates that citations actually support the generated claims
 
 ## Examples
 
 ### Example 1: Academic Citation
 **Input**: Source document about climate change, generated claim "Global temperatures have risen by 1.1°C since pre-industrial times"
-**Output**: 
+**Output**:
 ```
 Global temperatures have risen by 1.1°C since pre-industrial times [1].
 

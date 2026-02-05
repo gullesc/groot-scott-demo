@@ -45,10 +45,10 @@ The system returns a dictionary containing:
 - `prompt_strategy`: Which prompting approach was used (string)
 
 ## Acceptance Criteria
-- [ ] Analyzes retrieval confidence scores to adjust prompt strategy
-- [ ] Handles cases with too much or too little retrieved context
-- [ ] Implements query classification to select appropriate prompt templates
-- [ ] Includes confidence indicators in responses
+- [x] Analyzes retrieval confidence scores to adjust prompt strategy
+- [x] Handles cases with too much or too little retrieved context
+- [x] Implements query classification to select appropriate prompt templates
+- [x] Includes confidence indicators in responses
 
 ## Examples
 

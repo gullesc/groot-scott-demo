@@ -190,7 +190,7 @@
       "description": "Help your RAG sapling grow stronger branches through sophisticated prompt design and context management for Claude",
       "growthStage": "sapling",
       "estimatedHours": 8,
-      "status": "available",
+      "status": "completed",
       "objectives": [
         {
           "id": "7d7f5cc5-568f-4e20-b8b5-3997b5d92cbd",
@@ -224,7 +224,7 @@
             "Provides templates for different document types (technical, legal, academic)",
             "Includes fallback prompts for low-confidence retrievals"
           ],
-          "completed": false
+          "completed": true
         },
         {
           "id": "ffa4d376-e71c-464b-938e-f4ab957fa2e2",
@@ -236,7 +236,7 @@
             "Implements query classification to select appropriate prompt templates",
             "Includes confidence indicators in responses"
           ],
-          "completed": false
+          "completed": true
         },
         {
           "id": "67ae1269-909e-414f-9558-5d96a7a1c8ed",
@@ -248,7 +248,7 @@
             "Provides clickable source links in responses",
             "Validates that citations actually support the generated claims"
           ],
-          "completed": false
+          "completed": true
         }
       ],
       "keyConcepts": [
@@ -277,7 +277,7 @@
       "description": "Watch your RAG system grow into a strong tree by adding support for images, tables, and complex document structures",
       "growthStage": "tree",
       "estimatedHours": 12,
-      "status": "locked",
+      "status": "available",
       "objectives": [
         {
           "id": "009190a6-5111-4eb3-8221-3aa5a48a5e11",
