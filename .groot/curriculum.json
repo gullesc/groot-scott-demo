@@ -103,7 +103,7 @@
       "description": "Watch your RAG system sprout semantic understanding by implementing embedding-based retrieval for more intelligent document search",
       "growthStage": "sprout",
       "estimatedHours": 10,
-      "status": "available",
+      "status": "completed",
       "objectives": [
         {
           "id": "8c477d0d-f2c1-41c0-bf01-50d44f2c4617",
@@ -137,7 +137,7 @@
             "Includes metadata filtering capabilities",
             "Provides performance benchmarks for query response times"
           ],
-          "completed": false
+          "completed": true
         },
         {
           "id": "3e2831c6-5ccb-4d11-9c49-ac7e181008f4",
@@ -149,7 +149,7 @@
             "Implements retrieval result ranking and filtering",
             "Demonstrates improved relevance over keyword-based approach"
           ],
-          "completed": false
+          "completed": true
         },
         {
           "id": "f38fb91b-a69f-4ff5-99c8-45a38a880be6",
@@ -161,7 +161,7 @@
             "Compares different embedding models and chunking strategies",
             "Generates evaluation reports with actionable insights"
           ],
-          "completed": false
+          "completed": true
         }
       ],
       "keyConcepts": [
@@ -190,7 +190,7 @@
       "description": "Help your RAG sapling grow stronger branches through sophisticated prompt design and context management for Claude",
       "growthStage": "sapling",
       "estimatedHours": 8,
-      "status": "locked",
+      "status": "available",
       "objectives": [
         {
           "id": "7d7f5cc5-568f-4e20-b8b5-3997b5d92cbd",
