@@ -1,11 +1,13 @@
 # Master RAG Implementation with Anthropic Claude
 
-> Build a production-ready RAG system from foundations through advanced semantic search and evaluation
+> Build a production-ready RAG system from foundations through advanced semantic search, multi-modal processing, and conversational interfaces
 
 ## Growth Stages
 
 - **Phase 1: RAG Foundations & Document Processing** - Completed
 - **Phase 2: Semantic Search with Embeddings** - Completed
+- **Phase 3: Advanced RAG with Prompts & Citations** - Completed
+- **Phase 4: Multi-Modal RAG & Conversational Interface** - Completed
 
 ## Learning Objectives
 
@@ -15,6 +17,10 @@
 4. [x] Create your first RAG query using simple text matching
 5. [x] Implement vector-based semantic search for improved retrieval
 6. [x] Build evaluation frameworks to measure and optimize retrieval quality
+7. [x] Master prompt engineering for RAG systems
+8. [x] Implement context-aware retrieval strategies with citations
+9. [x] Process multi-modal content (images, tables, structured data)
+10. [x] Build conversational interfaces with context memory
 
 ---
 
@@ -80,6 +86,78 @@ Build a system to evaluate and optimize retrieval quality using test questions a
 
 ---
 
+## Phase 3: Advanced RAG with Prompts & Citations (Completed)
+
+> Watch your RAG system bloom with sophisticated prompt engineering and citation tracking
+
+### RAG Prompt Template Library
+
+Build a library of prompt templates optimized for different RAG use cases
+
+**Acceptance Criteria:**
+- [x] Includes templates for factual Q&A, summarization, and comparison
+- [x] Implements dynamic context insertion with proper formatting
+- [x] Provides templates for different document types (technical, narrative)
+- [x] Includes fallback prompts for low-confidence retrieval
+
+### Context-Aware RAG System
+
+Implement intelligent context handling that adapts based on retrieval quality
+
+**Acceptance Criteria:**
+- [x] Analyzes retrieval confidence scores to adjust prompts
+- [x] Handles cases with too much or too little retrieved context
+- [x] Implements query classification to select appropriate prompts
+- [x] Includes confidence indicators in responses
+
+### Citation and Source Tracking System
+
+Build comprehensive citation and source tracking for generated responses
+
+**Acceptance Criteria:**
+- [x] Maintains detailed mapping between generated text and sources
+- [x] Implements multiple citation formats (academic, web, inline)
+- [x] Provides clickable source links in responses
+- [x] Validates that citations actually support the generated claims
+
+---
+
+## Phase 4: Multi-Modal RAG & Conversational Interface (Completed)
+
+> Watch your RAG system grow into a strong tree by adding support for images, tables, and complex document structures
+
+### Multi-Modal Document Processor
+
+Extend your pipeline to extract and process images, tables, and structured content from documents
+
+**Acceptance Criteria:**
+- [x] Extracts and processes images with OCR and vision models (simulated)
+- [x] Handles table extraction and converts to searchable format
+- [x] Processes structured data (JSON, CSV) with proper metadata
+- [x] Maintains relationships between different content types
+
+### Hybrid Retrieval System
+
+Implement a sophisticated retrieval system that combines multiple search strategies
+
+**Acceptance Criteria:**
+- [x] Combines semantic similarity with keyword matching and metadata filtering
+- [x] Implements query expansion and synonym handling
+- [x] Includes re-ranking model for result optimization
+- [x] Provides explainable retrieval scores and reasoning
+
+### Conversational RAG Interface
+
+Build a chat-like interface that maintains conversation context and handles follow-up questions
+
+**Acceptance Criteria:**
+- [x] Maintains conversation history and context across multiple turns
+- [x] Handles follow-up questions and clarifications intelligently
+- [x] Implements conversation memory with relevant context retrieval
+- [x] Provides conversation summarization and key points extraction
+
+---
+
 ## Key Concepts
 
 ### Retrieval-Augmented Generation (RAG)
@@ -104,6 +182,14 @@ A specialized database optimized for storing and querying high-dimensional vecto
 - **Recall@k**: Fraction of relevant documents that were retrieved
 - **MRR (Mean Reciprocal Rank)**: Average of reciprocal ranks of first relevant result
 
+### Hybrid Retrieval
+
+Combining multiple retrieval strategies (semantic, keyword, metadata) for improved accuracy
+
+### Conversational Context
+
+Maintaining dialogue history to understand follow-up questions and references
+
 ---
 
 ## Running Tests
@@ -116,18 +202,33 @@ python3 -m pytest -v
 
 ```
 src/
-  document_ingestion_pipeline.py      # Phase 1: Document processing
-  basic_rag_question_answering_system.py  # Phase 1: Basic RAG
-  vector_database_implementation.py   # Phase 2: Vector storage
-  semantic_rag_system.py              # Phase 2: Semantic search
-  retrieval_evaluation_framework.py   # Phase 2: Evaluation metrics
+  # Phase 1: Foundation
+  document_ingestion_pipeline.py          # Document processing
+  basic_rag_question_answering_system.py  # Basic RAG
+
+  # Phase 2: Semantic Search
+  vector_database_implementation.py       # Vector storage
+  semantic_rag_system.py                  # Semantic search
+  retrieval_evaluation_framework.py       # Evaluation metrics
+
+  # Phase 3: Advanced RAG
+  rag_prompt_template_library.py          # Prompt templates
+  context_aware_rag_system.py             # Context-aware retrieval
+  citation_and_source_tracking_system.py  # Citation tracking
+
+  # Phase 4: Multi-Modal & Conversational
+  multi_modal_document_processor.py       # Multi-modal processing
+  hybrid_retrieval_system.py              # Hybrid retrieval
+  conversational_rag_interface.py         # Conversational interface
 
 specs/
-  phase-1/                            # Phase 1 specifications
-  phase-2/                            # Phase 2 specifications
+  phase-1/                                # Phase 1 specifications
+  phase-2/                                # Phase 2 specifications
+  phase-3/                                # Phase 3 specifications
+  phase-4/                                # Phase 4 specifications
 
 tests/
-  test_*.py                           # Test files for each module
+  test_*.py                               # Test files for each module
 ```
 
 ---
