@@ -277,7 +277,7 @@
       "description": "Watch your RAG system grow into a strong tree by adding support for images, tables, and complex document structures",
       "growthStage": "tree",
       "estimatedHours": 12,
-      "status": "available",
+      "status": "completed",
       "objectives": [
         {
           "id": "009190a6-5111-4eb3-8221-3aa5a48a5e11",
@@ -311,7 +311,7 @@
             "Processes structured data (JSON, CSV) with proper metadata",
             "Maintains relationships between different content types"
           ],
-          "completed": false
+          "completed": true
         },
         {
           "id": "41f274e1-f790-49e3-b91a-174df10dbfd5",
@@ -323,7 +323,7 @@
             "Includes re-ranking model for result optimization",
             "Provides explainable retrieval scores and reasoning"
           ],
-          "completed": false
+          "completed": true
         },
         {
           "id": "a93a34e9-7e83-4519-949f-acce9ecf1d10",
@@ -335,7 +335,7 @@
             "Implements conversation memory with relevant context retrieval",
             "Provides conversation summarization and key points extraction"
           ],
-          "completed": false
+          "completed": true
         }
       ],
       "keyConcepts": [
@@ -364,7 +364,7 @@
       "description": "Let your RAG system flower into a production-ready application with monitoring, optimization, and scalability features",
       "growthStage": "flowering",
       "estimatedHours": 7,
-      "status": "locked",
+      "status": "available",
       "objectives": [
         {
           "id": "2d2daeda-04c7-4d06-8e68-8e76b572ef64",
