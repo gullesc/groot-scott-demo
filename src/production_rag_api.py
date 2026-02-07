@@ -1142,3 +1142,89 @@ def create_production_rag_api(host: str = "localhost", port: int = 8080,
         ProductionRagApi: A new instance of ProductionRagApi
     """
     return ProductionRagApi(host=host, port=port, rag_processor=rag_processor)
+
+
+# =============================================================================
+# Default RAG Processor using Conversational Interface (Phase 4)
+# =============================================================================
+
+def create_default_rag_processor():
+    """
+    Create a default RAG processor using the Phase 4 Conversational RAG Interface.
+
+    This provides the same RAG processing used by the web UI, ensuring
+    consistency between the standalone API and the Flask-based interface.
+    """
+    from src.conversational_rag_interface import create_conversational_rag_interface
+
+    # Create the conversational interface
+    interface = create_conversational_rag_interface()
+
+    # Load sample knowledge (same as web_ui.py)
+    knowledge_items = [
+        "RAG (Retrieval-Augmented Generation) is a technique that combines information retrieval with text generation. It allows language models to access external knowledge bases to provide more accurate and up-to-date responses.",
+        "The main benefits of RAG systems include: 1) Access to current information beyond the model's training data, 2) Reduced hallucination through grounded responses, 3) More cost-effective than fine-tuning for many use cases, 4) Easy to update knowledge without retraining.",
+        "Vector embeddings are numerical representations of text that capture semantic meaning. Similar concepts have similar embeddings, enabling semantic search rather than just keyword matching.",
+        "Hybrid retrieval combines multiple search strategies: semantic similarity using embeddings, keyword matching using TF-IDF, and metadata filtering. This approach often outperforms single-strategy retrieval.",
+        "Fine-tuning involves training a model on specific data to adapt it for particular tasks. While powerful, it's more expensive and requires technical expertise compared to RAG approaches.",
+        "Query expansion improves retrieval by adding synonyms and related terms to user queries. For example, 'ML' might be expanded to include 'machine learning' and 'artificial intelligence'.",
+        "Conversation memory in RAG systems allows the model to maintain context across multiple turns, enabling natural follow-up questions and references to earlier parts of the conversation.",
+        "Multi-modal RAG extends traditional text-based RAG to handle images, tables, and structured data like JSON and CSV files.",
+        "Re-ranking in retrieval systems reorders initial search results using additional criteria like document freshness, quality scores, or relevance to the specific query context.",
+    ]
+
+    for item in knowledge_items:
+        interface.add_knowledge(item)
+
+    def processor(data: Dict[str, Any]) -> Dict[str, Any]:
+        """Process a RAG query using the conversational interface."""
+        query = data.get('query', '')
+        result = interface.chat(query)
+
+        return {
+            'response': result['response'],
+            'sources': result.get('retrieved_context', []),
+            'query_analysis': result.get('query_analysis', {}),
+            'conversation_turn': result.get('conversation_turn', 0)
+        }
+
+    return processor
+
+
+# =============================================================================
+# Standalone execution with real RAG processing
+# =============================================================================
+
+if __name__ == "__main__":
+    print("\n" + "=" * 60)
+    print("  Production RAG API - Standalone Server")
+    print("  Using Phase 4 Conversational RAG Interface")
+    print("=" * 60)
+
+    # Create API with real RAG processor
+    processor = create_default_rag_processor()
+    api = ProductionRagApi(host="127.0.0.1", port=8080, rag_processor=processor)
+
+    # Create a demo API key
+    demo_key = api.create_api_key(
+        client_id="demo-user",
+        rate_limit=60,
+        permissions=["query", "health", "metrics"]
+    )
+
+    print(f"\n  Demo API Key (for testing):")
+    print(f"  {demo_key}")
+    print("\n  Endpoints:")
+    print("  - POST /api/v1/query   (requires auth)")
+    print("  - GET  /api/v1/health  (no auth)")
+    print("  - GET  /api/v1/docs    (no auth)")
+    print("  - GET  /api/v1/metrics (requires auth)")
+    print("\n  Example curl:")
+    print(f'  curl -X POST http://127.0.0.1:8080/api/v1/query \\')
+    print(f'    -H "Authorization: Bearer {demo_key}" \\')
+    print(f'    -H "Content-Type: application/json" \\')
+    print(f'    -d \'{{"query": "What is RAG?"}}\'')
+    print("\n" + "=" * 60 + "\n")
+
+    # Start the server
+    api.execute(blocking=True)
